@@ -1,0 +1,117 @@
+/*jumbotron ----------------------------------------------------------------- */
+.jumbotron {
+  background-image: url("../../images/banner-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 70%;
+  border-top: 2px solid #cccccc;
+  border-bottom: 2px solid #cccccc;
+  padding: 0;
+}
+.jumbotron h1 {
+  font-size: 50px;
+  font-weight: normal;
+}
+.jumbotron .content {
+  margin-bottom: 0;
+}
+.jumbotron .container {
+  padding: 0;
+}
+/*jumbotron ----------------------------------------------------------------- */
+.publication-filters,
+.search-header {
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-between;
+}
+.search-header .form-group {
+  width: 35%
+}
+.search-header label {
+  padding-top: 5px;
+  width: 70%;
+}
+/*search result-------------------------------------------------------------- */
+.publication-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.result-description {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+.publication-filters {
+  padding: 25px;
+}
+.publication-filters .form-group {
+  margin: 0 5px;
+}
+.publication-filters .form-control {
+  min-width: 255px;
+}
+.publication-filters .form-group label {
+  padding-top: 8px;
+  padding-right: 5px;
+}
+.article::before {
+  content: "";
+  height: 60px;
+  width: 60px;
+  display: inline-block;
+  background-image: url("../../images/icon-publication.svg");
+  background-repeat: no-repeat;
+  background-size: 50px;
+  padding: 25px 0;
+  position: absolute;
+  margin-left: -70px;
+}
+/* form group --------------------------------------------------------------- */
+.form-group {
+  display: inline-flex;
+}
+.form-group .label {
+  padding-top: 8px;
+}
+.article {
+  position: relative;
+}
+/* typography --------------------------------------------------------------- */
+p a {
+  font-size: 16px;
+}
+/* responsive --------------------------------------------------------------- */
+@media (max-width: 767px) {
+  .publication-filters,
+  .search-header {
+    flex-direction: column;
+  }
+  .search-header .form-group,
+  .publication-filters .form-group {
+    flex-direction: column;
+    width: 100%
+  }
+  .publication-filters .form-group {
+    margin: 0 0 10px 0;
+  }
+  .search-header label {
+    padding-top: 5px;
+    width: 90%;
+  }
+  .article::before {
+    display: none;
+  }
+  .article:: {
+    content: "";
+    height: 60px;
+    width: 60px;
+    display: inline-block;
+    background-image: url("../../images/icon-publication.svg");
+    background-repeat: no-repeat;
+    background-size: 50px;
+    padding: 25px 0;
+    position: absolute;
+    margin-left: -70px;
+  }
+}

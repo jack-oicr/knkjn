@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Awadalla Labs | Home Page</title>
+
+    <!-- Required meta tags always come first -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <!-- Required for IE mobile -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <link type="text/css" rel="stylesheet" media="all" href="../bootstrap/css/bootstrap.min.css">
+
+    <!-- Theme CSS -->
+    <link type="text/css" rel="stylesheet" media="all" href="../css/base/mysite-bootstrap.css">
+    <link type="text/css" rel="stylesheet" media="all" href="../css/pages/contact.css">
+
+    <!-- Additional CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Karla:400,700|Roboto" rel="stylesheet">
+
+  </head>
+
+  <body class="front not-logged-in">
+    <div id="page-wrapper" class="page-wrapper">
+      <div id="page" class="page">
+
+        <!-- Navbar -->
+
+        <nav class="navbar navbar-default navbar-static-top">
+          <div class="container container-nav">
+
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+
+              <!-- Site info / Navbar brand -->
+              <a href="#" title="Home" rel="home" id="site-logo" class="logo navbar-brand"> <img src="../images/logo-awadalla-lab.svg" alt="G2MC"/></a>
+
+              <!-- Navbar toggle -->
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+                 <span class="sr-only">Toggle navigation</span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+               </button>
+            </div>
+            <!-- .navbar-header -->
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbar-collapse-1">
+              <nav role="navigation">
+
+                <!-- Main menu -->
+                <div class="menu-main-menu">
+
+                  <!-- Lanuage + Search -->
+                  <div class="navbar-top">
+                    <!-- Search form -->
+                    <div class="wfui-search-container">
+                        <form id="awadalla-search" class="form-inline webform-search">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="search-jobs-keyword" placeholder="Search"value="" autocomplete="off" />
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Search -->
+                  </div>
+                  <!-- Lanuage + Search -->
+
+                  <ul id="nav-main-menu" class="nav navbar-nav ">
+                    <li role="presentation" class="text-uppercase"><a href="">Our Research</a></li>
+                    <li role="presentation" class="text-uppercase"><a href="">Publications</a></li>
+                    <li role="presentation" class="dropdown">
+                      <a href="" class="dropdown-toggle text-uppercase" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About Us</a>
+                      <ul class="dropdown-menu">
+                        <li><a href="" title="Overview">Overview</a></li>
+                        <li><a href="" title="Our Team">Meet The Team</a></li>
+                        <li><a href="" title="Our Partners">"In The Media"</a></li>
+                      </ul>
+                    </li>
+                    <li role="presentation" class="text-uppercase"><a href="">Join the Team</a></li>
+                    <li role="presentation" class="text-uppercase active"><a href="ContactUs.html">Contact Us</a></li>
+                  </ul>
+                </div>
+                <!-- main menu -->
+              </nav>
+              <!-- .navbar-collapse -->
+            </div>
+            <!-- .container -->
+          </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+          <div id="page" class="page">
+
+            <!-- Banner -->
+            <div class="jumbotron wrapper">
+              <div class="container container-jumbotron banner">
+                <div class="col-md-12 banner-content content text-center">
+                  <h1 class="text-uppercase">Contact us</h1>
+                </div>
+              </div>
+            </div>
+            <!-- Banner -->
+
+            <!-- about us -->
+            <div class="container contact-us ">
+              <div class="row">
+                <div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
+                  <img src="../images/icon-contactus.svg" class="image-icon" alt="">
+                  <p><strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</strong></p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-12 col-md-6 text-left">
+                  <div id="mc_embed_signup">
+
+                      <form  method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+
+                          <div class="form-group">
+                              <label for="mce-ORG">Name:</label>
+                              <input type="text" name="ORG" class="form-control required" id="mce-ORG" required="">
+                          </div>
+                          <div class="form-group">
+                              <label for="mce-EMAIL">Email Address:</label>
+                              <input type="email" value="" name="EMAIL" class="form-control required email" id="mce-EMAIL" required="">
+                          </div>
+                          <div class="form-group">
+                              <label for="mce-INTEREST">Subject: </label>
+                              <select name="INTEREST" class="form-control required" id="mce-INTEREST" required="">
+                                  <option value="">-- Select an Option --</option>
+                                  {% for option in form.interest_list %}
+                                  <option value="{{option}}">{{option}}</option>
+                                  {% endfor %}
+                              </select>
+                          </div>
+                          <div class="form-group">
+                              <label for="mce-MESSAGE">Questions/Comments:</label>
+                              <textarea value="" name="MESSAGE" class="form-control required" id="mce-MESSAGE" maxlength="500" required=""></textarea>
+                          </div>
+                          <div id="mce-responses" class="clear">
+                              <div class="response" id="mce-error-response" style="display:none"></div>
+                              <div class="response" id="mce-success-response" style="display:none"></div>
+                          </div>
+                          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                          <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                              <input type="text" name="b_a4e399df35b0bd84e47859eca_e9f40a76f3" tabindex="-1" value="">
+                          </div>
+                          <div class="">
+                              <input type="submit" value="Submit" name="SUBMIT" id="mc-embedded-subscribe" class="btn btn-primary">
+                          </div>
+                      </form>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-md-6 forum-right">
+                  <div class="forum-description box-content form-info">
+                    <div class="text-left">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis tenetur pariatur ab labore cum reiciendis!</p>
+                    </div>
+                    <div class="text-left">
+                      <p>MaRS Centre, West Tower 661 University Avenue, Suite 510 Toronto, Ontario Canada M5G 0A3</p>
+                    </div>
+                  </div>
+                  <div class="forum-pictures">
+                    <div class="image-frame">
+                      <img src="../images/awadalla-lab-team-photo-contactus.png" class="contact-img" alt="">
+                    </div>
+                    <div class="image-frame">
+                      <img src="../images/mars-discovery-district-contactus.png" class="contact-img" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- about us -->
+
+          </div>
+        </div>
+
+
+
+        <!-- footer -->
+        <footer class="wrapper">
+          <div class="container container-footer">
+            <div class="row company-logos">
+              <div class="col-xs-12 col-md-2 col-md-offset-2 oicr-logo text-center">
+                <img src="../images/logo-ontario-institute-for-cancer-research-white.svg" alt="OICR-Logo">
+              </div>
+              <div class="col-xs-12 col-md-2 genome-logo text-center">
+                <img src="../images/logo-genome-canada-white.png" alt="Genome Canada Logo">
+              </div>
+              <div class="col-xs-12 col-md-2 cdic-logo text-center">
+                <img src="../images/logo-cdic-white.svg" alt="CDIC Logo">
+              </div>
+              <div class="col-xs-12 col-md-2 health-logo text-center">
+                <img src="../images/logo-ontario-health-study-white.png" alt="Ontario Health Study Logo">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6 text-left">
+                <p>@Copyright Awadalla Research Laboratory 2017</p>
+              </div>
+              <div class="col-xs-6 policy">
+                <p>Terms and Conditions</p>
+                <ul>
+                  <li><a href="">Policy</a></li>
+                </ul>
+              </div>
+            </div>
+           </div>
+          </div>
+        </footer>
+      </div>
+      <!-- page -->
+    </div>
+    <!-- page-wrapper -->
+
+    <!-- Bootstrap JS -->
+    <!-- jQuery first, then Bootstrap JS. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+    <script type="text/javascript" src="../bootstrap/js/bootstrap.js"></script>
+
+    <!-- Theme JS -->
+    <script type="text/javascript" src="../js/mysite-bootstrap.js"></script>
+
+    <!-- Additional JS -->
+
+  </body>
+</html>
